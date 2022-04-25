@@ -56,9 +56,9 @@ public class Get03 extends JsonPlaceHolderBaseUrl {
                 assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
-                body("title", equalTo("et itaque necessitatibus maxime molestiae qui quas velitXXX"),
+                body("title", equalTo("et itaque necessitatibus maxime molestiae qui quas velit"),
                         "completed", equalTo(false),
-                        "userId", equalTo(21));
+                        "userId", equalTo(2));
 
         /*
             Note 1: When you execute assertions, Java stops execution just after the first failure, it means assertions after the failure

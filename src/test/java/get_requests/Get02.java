@@ -1,6 +1,7 @@
 package get_requests;
 
 import io.restassured.RestAssured;
+import io.restassured.config.RestAssuredConfig;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -9,6 +10,7 @@ import java.net.URISyntaxException;
 import static io.restassured.RestAssured.*;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 import static org.junit.Assert.*;
+
 public class Get02 {
     /*
         Given
@@ -28,10 +30,11 @@ public class Get02 {
      */
 
     @Test
-    public void get01()throws URISyntaxException {
-        RestAssured.config = RestAssured.config().encoderConfig(encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false));
+    public void get01() {
+// RestAssured.config = new RestAssuredConfig().encoderConfig(encoderConfig().defaultContentCharset("UTF-8"));
+
 //        i) Set the URL
-        String url = "http://dummy.restapiexample.com/api/v1/employees";
+        String url = "https://restful-booker.herokuapp.com/booking/1001";
 //        ii)Set the expected the data(POST-PUT-PATCH)
 //        iii) Type the code to send request
         Response response = given().when().get(url);
@@ -45,6 +48,6 @@ public class Get02 {
         //assertFalse(y) method passes if the y is false.
         assertFalse(response.asString().contains("TechProEd"));
         //assertEquals( x, y) method will pass if the x is equal to y.
-        assertEquals("Cowboy",response.getHeader("Server"));
+        assertEquals("Cowboy", response.getHeader("Server"));
     }
 }

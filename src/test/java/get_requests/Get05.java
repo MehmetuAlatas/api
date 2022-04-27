@@ -23,7 +23,7 @@ public class Get05 extends HerOkuAppBaseUrl {
      */
     @Test
     public void get01(){
-        RestAssured.config = RestAssured.config().encoderConfig(encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false));
+//        RestAssured.config = RestAssured.config().encoderConfig(encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false));
 
 
         //1.Step:Set the Url
@@ -40,7 +40,7 @@ public class Get05 extends HerOkuAppBaseUrl {
         //4.Step: Do Assertion
         response.then().assertThat().statusCode(200);
 
-        assertTrue(response.asString().contains("bookingid"));
+        assertFalse(response.asString().contains("bookingid"));
 
     }
 }

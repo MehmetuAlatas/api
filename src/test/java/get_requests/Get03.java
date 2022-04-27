@@ -29,7 +29,7 @@ public class Get03 extends JsonPlaceHolderBaseUrl {
      */
     @Test
     public void get01(){
-        RestAssured.config = RestAssured.config().encoderConfig(encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false));
+     //   RestAssured.config = RestAssured.config().encoderConfig(encoderConfig().appendDefaultContentCharsetToContentTypeIfUndefined(false));
         //1.Step: Set the Url
         //String url = "https://jsonplaceholder.typicode.com/todos/23";//This is not recommended
         spec.pathParams("first", "todos", "second", 23);

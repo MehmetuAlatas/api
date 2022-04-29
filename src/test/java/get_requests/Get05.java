@@ -40,7 +40,7 @@ public class Get05 extends HerOkuAppBaseUrl {
         //4.Step: Do Assertion
         response.then().assertThat().statusCode(200);
 
-        assertFalse(response.asString().contains("bookingid"));
+        assertTrue(response.asString().contains("bookingid"));
 
     }
 }

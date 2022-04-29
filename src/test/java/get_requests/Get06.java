@@ -74,12 +74,12 @@ public class Get06 extends HerOkuAppBaseUrl {
         SoftAssert softAssert = new SoftAssert();
 
         //2)By using softAssert object do assertion
-        softAssert.assertEquals(json.getString("firstname"), "Sally", "Firstname did not match");
-        softAssert.assertTrue(json.getString("lastname").equals("Jackson"), "Lastname did not match");
-        softAssert.assertEquals(json.getInt("totalprice"), 556, "Total price did not match");
+        softAssert.assertEquals(json.getString("firstname"), "Eric", "Firstname did not match");
+        softAssert.assertTrue(json.getString("lastname").equals("Jones"), "Lastname did not match");
+        softAssert.assertEquals(json.getInt("totalprice"), 196, "Total price did not match");
         softAssert.assertFalse(json.getBoolean("depositpaid"), "Deposit paid is not false");
-        softAssert.assertEquals(json.getString("bookingdates.checkin"), "2016-09-25", "Check in date did not match");
-        softAssert.assertEquals(json.getString("bookingdates.checkout"), "2017-04-17", "Check out date did not match");
+        softAssert.assertEquals(json.getString("bookingdates.checkin"), "2021-10-12", "Check in date did not match");
+        softAssert.assertEquals(json.getString("bookingdates.checkout"), "2022-03-06", "Check out date did not match");
 
         //3.Step: Use assertAll() method, otherwise you will get pass everytime, but it will not be meaningful
         softAssert.assertAll();

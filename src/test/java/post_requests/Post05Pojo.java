@@ -77,5 +77,6 @@ public class Post05Pojo extends HerOkuAppBaseUrl {
         //2.Way: Recommended
         assertEquals(bookingDates.getCheckin(), actualPojo.getBooking().getBookingdates().getCheckin());
         assertEquals(bookingDates.getCheckout(), actualPojo.getBooking().getBookingdates().getCheckout());
+
     }
 }

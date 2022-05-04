@@ -43,6 +43,6 @@ public class Get15ObjectMapper extends HerOkuAppBaseUrl {
                 "\"additionalneeds\": \"Breakfast\"\n" +
                 "}";
         BookingPojo expectedDataPojo=JsonUtil.convertJsonToJavaObject(expectedData, BookingPojo.class);
-        Response response = given().spec(spec).when().get()
+      //  Response response = given().spec(spec).when().get()
     }
 }

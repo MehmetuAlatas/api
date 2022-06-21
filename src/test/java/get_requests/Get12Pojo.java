@@ -15,6 +15,7 @@ public class Get12Pojo extends HerOkuAppBaseUrl {
         Given
             https://restful-booker.herokuapp.com/booking/2
         When
+
           I send GET Request to the URL
        Then
           Status code is 200
